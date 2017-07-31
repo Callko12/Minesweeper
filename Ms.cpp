@@ -57,8 +57,7 @@ void update (MSNode ** A, int i, int j) {
 	if ((i+1)<row && (j>0) && A[i+1][j-1].xplode == true) { A[i][j].count++;
  } 
 	if ((i+1)<row && A[i+1][j].xplode == true) { A[i][j].count++; }
-	if ((i+1)<row && (j+1)<col && A[i+1][j+1].xplode == true) { A[i][j].coun
-t++; }
+	if ((i+1)<row && (j+1)<col && A[i+1][j+1].xplode == true) { A[i][j].count++; }
 	if ((j+1)<col && A[i][j+1].xplode == true) A[i][j].count++;
 	if ((i>0) && (j+1)<col && A[i-1][j+1].xplode == true) { A[i][j].count++;
  }
@@ -194,8 +193,7 @@ int main () {
 
 		else if (x<0 || y<0 || x>=col || y>=row) {	
 		cin.ignore(1000, '\n');
-			cout << "Illegal Input. To keep playing, enter legal coo
-rdinates.  " << endl;
+			cout << "Illegal Input. To keep playing, enter legal coordinates.  " << endl;
 		
 		}
 
